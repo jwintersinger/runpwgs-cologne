@@ -14,7 +14,7 @@ function run_test {
   $PYTHON $PWGSDIR/evolve.py -B 5 -s 5 --tmp-dir $TMPDIR --mh-iterations $MH_ITERATIONS $PWGSDIR/{ssm,cnv}_data.txt
   mkdir -p outputs
   cd outputs
-  $PYTHON $PWGSDIR/write_results.py test ../trees.zip test.{summ.json.gz,muts.json.gz,mutass.zip}
+  $PYTHON $PWGSDIR/write_results.py --include-ssm-names test ../trees.zip test.{summ.json.gz,muts.json.gz,mutass.zip}
 }
 
 run_test

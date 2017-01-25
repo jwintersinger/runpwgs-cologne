@@ -7,6 +7,7 @@ function generate_outputs {
   sampid=$1
   cd $RUNDIR
   $PYTHON $PWGSDIR/write_results.py \
+    --include-ssm-names \
     $sampid \
     $sampid/trees.zip \
     $OUTPUTSDIR/$sampid.{summ.json.gz,muts.json.gz,mutass.zip}
