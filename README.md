@@ -18,8 +18,10 @@ Hello, Martin and Tsun-Po! Here are directions for running PhyloWGS:
    `/pancan/pcawg11/subclonal_architecture/morris/inputs/consensus.sample-5000.pwgs.run1.tar.gz`.
    Extract these to the inputs directory:
 
+       ```
        cd ~/morrislab_runs/inputs.run1
        tar xzf ~/consensus.sample-5000.pwgs.run1.tar.gz
+       ```
 
 6. Run `bash run_pcawg.sh` to generate a list of commands to submit to your
    queue.  Ideally, all jobs will run to completion, but at some point over the
