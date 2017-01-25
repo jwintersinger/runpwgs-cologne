@@ -10,16 +10,16 @@ Hello, Martin and Tsun-Po! Here are directions for running PhyloWGS:
    GSL, Python 2.7, and Git available, which probably entails loading modules
    for them.
 
-4. Please download inputs from Jamboree at
+4. Run `bash run_test.sh`. Ensure that
+   `~/morrislab_runs/test_run/test.{summ.json.gz,muts.json.gz,mutass.zip}` are
+   all created.
+
+5. Please download inputs from Jamboree at
    `/pancan/pcawg11/subclonal_architecture/morris/inputs/consensus.sample-5000.pwgs.run1.tar.gz`.
    Extract these to the inputs directory:
 
        cd ~/morrislab_runs/inputs.run1
        tar xzf ~/consensus.sample-5000.pwgs.run1.tar.gz
-
-5. Run `bash run_test.sh`. Ensure that
-   `~/morrislab_runs/test_run/test.{summ.json.gz,muts.json.gz,mutass.zip}` are
-   all created.
 
 6. Run `bash run_pcawg.sh` to generate a list of commands to submit to your
    queue.  Ideally, all jobs will run to completion, but at some point over the
