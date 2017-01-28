@@ -10,12 +10,13 @@ BASEDIR=$HOME/morrislab_runs
 # You shouldn't need to edit any of the following.
 # ================================================
 
+# RUN must be set by whatever script includes CONFIG.sh.
+
 # Where PhyloWGS will be downloaded & installed to.
 PWGSDIR=$BASEDIR/phylowgs
-RUN=run1
 # Directory containing *.ssm and *.cnv files used as inputs by PhyloWGS,
 # downloaded from Jamboree.
-INPUTSDIR=$BASEDIR/inputs.$RUN/consensus.sample-5000.pwgs.run1
+INPUTSDIR=$BASEDIR/inputs/consensus.sample-5000.pwgs.$RUN
 # Where PhyloWGS will run.
 RUNDIR=$BASEDIR/run.$RUN
 # Where outputs to be uploaded to Jamboree will be written.

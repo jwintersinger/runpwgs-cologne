@@ -1,16 +1,19 @@
 #!/bin/bash
 set -euo pipefail
 SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+RUN=$1
+SAMPID=$2
+
 source $SCRIPTDIR/CONFIG.sh
 
 function generate_outputs {
-  sampid=$1
+  mkdir -p $OUTPUTSDIR
   cd $RUNDIR
   $PYTHON $PWGSDIR/write_results.py \
     --include-ssm-names \
-    $sampid \
-    $sampid/trees.zip \
-    $OUTPUTSDIR/$sampid.{summ.json.gz,muts.json.gz,mutass.zip}
+    $SAMPID \
+    $SAMPID/trees.zip \
+    $OUTPUTSDIR/$SAMPID.{summ.json.gz,muts.json.gz,mutass.zip}
 }
 
-generate_outputs $1
+generate_outputs
