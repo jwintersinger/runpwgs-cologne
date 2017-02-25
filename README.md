@@ -14,27 +14,17 @@ Hello, Martin and Tsun-Po! Here are directions for running PhyloWGS:
 
 4. Please download inputs from Jamboree at:
 
-   `/pancan/pcawg11/subclonal_architecture/morris/inputs/consensus.sample-5000.pwgs.run1.tar.gz`
-   `/pancan/pcawg11/subclonal_architecture/morris/inputs/consensus.sample-5000.pwgs.run2.tar.gz`
-   `/pancan/pcawg11/subclonal_architecture/morris/inputs/consensus.sample-5000.pwgs.run4.tar.gz`
-   `/pancan/pcawg11/subclonal_architecture/morris/inputs/consensus.sample-5000.pwgs.run6.tar.gz`
+   /pancan/pcawg11/subclonal_architecture/morris/inputs/consensus.pwgs.runf.tar.gz
 
    Extract these to the inputs directory:
 
    ```
-   cd ~/morrislab_runs/inputs.run1
-   tar xzf ~/consensus.sample-5000.pwgs.run1.tar.gz
-   tar xzf ~/consensus.sample-5000.pwgs.run2.tar.gz
-   tar xzf ~/consensus.sample-5000.pwgs.run4.tar.gz
-   tar xzf ~/consensus.sample-5000.pwgs.run6.tar.gz
+   cd ~/morrislab_runs/inputs
+   tar xzf ~/consensus.pwgs.runf.tar.gz
    ```
 
-5. Run `bash run_pcawg.sh run1` to generate a list of commands to submit to
-   your queue.  Repeat this command for `run2`, `run4`, and `run6`. Ideally,
-   all jobs will run to completion, but at some point over the next couple days
-   we may have to stop the MCMC runs early so that we can generate results.
+5. Run `bash run_pcawg.sh runf` to generate a list of commands to submit to
+   your queue.
 
-6. Run `bash generate_outputs.sh run1` to generate a list of commands to submit
-   to your queue to produce the outputs we'll need. Repeat this command for
-   `run2`, `run4`, and `run6`. Please send us over Jamboree everything in the
-   `~/morrislab_runs/outputs.run1` directory.
+6. Run `bash generate_outputs.sh runf` to generate a list of commands to submit
+   to your queue to produce the outputs we'll need.
