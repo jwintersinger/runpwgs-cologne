@@ -16,7 +16,7 @@ BASEDIR=$HOME/morrislab_runs
 PWGSDIR=$BASEDIR/phylowgs
 # Directory containing *.ssm and *.cnv files used as inputs by PhyloWGS,
 # downloaded from Jamboree.
-INPUTSDIR=$BASEDIR/inputs/consensus.sample-5000.pwgs.$RUN
+INPUTSDIR=$BASEDIR/inputs/consensus.pwgs.$RUN
 # Where PhyloWGS will run.
 RUNDIR=$BASEDIR/run.$RUN
 # Where outputs to be uploaded to Jamboree will be written.
