@@ -1,6 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+RUN=notavail
 source $SCRIPTDIR/CONFIG.sh
 
 # Prerequisities:
@@ -13,7 +14,6 @@ function install {
   rm -rf $PWGSDIR
   git clone https://github.com/morrislab/phylowgs.git $PWGSDIR
   cd $PWGSDIR
-  git checkout polyclonalfix
   g++ -o mh.o -O3 mh.cpp  util.cpp `gsl-config --cflags --libs`
 }
 
